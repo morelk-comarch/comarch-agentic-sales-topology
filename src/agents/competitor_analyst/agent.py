@@ -26,10 +26,12 @@ Your goal is to compare the Comarch offer against competitor proposals and preci
         - [Weak point 2] [Competitor Source Citation]
 """
 
-competitive_advantage_finder = Agent(
+competitor_analyst_agent = Agent(
     model="gemini-2.5-flash",
     name="competitor_analyst",
     description="Strategic Competitive Analyst Generating Comarch Superiority Arguments.",
     instruction=instruction,
     tools=[google_search]
 )
+
+root_agent = competitor_analyst_agent
