@@ -5,6 +5,7 @@ from .sub_agents.interview_analyzer import interview_analyzer_agent
 from .sub_agents.product_matcher import product_matcher_agent
 from .sub_agents.proposal_writer import proposal_writer_agent
 from .sub_agents.visual_generator import visual_generator_agent
+# from .sub_agents.docx_assembler import docx_assembler_agent
 from google.adk.tools import agent_tool
 
 instruction = """You are the Lead Project Manager for a proposal generation system.
@@ -30,6 +31,7 @@ proposal_writer_as_tool = agent_tool.AgentTool(agent=proposal_writer_agent)
 pricing_calculator_as_tool = agent_tool.AgentTool(agent=pricing_calculator_agent)
 product_matcher_as_tool = agent_tool.AgentTool(agent=product_matcher_agent)
 visual_generator_agent_as_tool = agent_tool.AgentTool(agent=visual_generator_agent)
+# docx_assembler_as_tool = agent_tool.AgentTool(agent=docx_assembler_agent)
 
 orchestrator_agent  = Agent(
     model='gemini-2.5-flash',
