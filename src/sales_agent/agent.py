@@ -1,10 +1,10 @@
 from google.adk.agents.llm_agent import Agent
-from pricing_calculator import pricing_calculator_agent
-from competitor_analyst import competitor_analyst_agent
-from interview_analyzer import interview_analyzer_agent
-from product_matcher import product_matcher_agent
-from proposal_writer import proposal_writer_agent
-from visual_generator import visual_generator_agent
+from .sub_agents.pricing_calculator import pricing_calculator_agent
+from .sub_agents.competitor_analyst import competitor_analyst_agent
+from .sub_agents.interview_analyzer import interview_analyzer_agent
+from .sub_agents.product_matcher import product_matcher_agent
+from .sub_agents.proposal_writer import proposal_writer_agent
+from .sub_agents.visual_generator import visual_generator_agent
 from google.adk.tools import agent_tool
 
 instruction = """You are the Lead Project Manager for a proposal generation system.
